@@ -19,7 +19,7 @@ mySocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Let the port be reused if no process is actually using it
 mySocket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 # Bind to the address corresponding to the main name of the host
-mySocket.bind((socket.gethostname(), 8080))
+mySocket.bind(('localhost', 1234)) #ligar a IP y puerto
 
 # Queue a maximum of 5 TCP connection requests
 
